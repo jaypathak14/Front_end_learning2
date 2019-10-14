@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <p>dsvf</p>
+    </div>
+    <div id="div2">
+        <p>dsvf</p>
+    </div>
+    <div id="div3">
+        <p>dsvf</p>
+    </div>
+    <div id="div4">
+        <img id="imgg">
+
+    </div>
+    <div id="btn">
+        <button>
+    click the button  to hide
+</button>
+    </div>
+    <script src="jquery-3.4.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+
+            //            $("#btn").click(function() {
+            // $("img").attr("src", "0I0A0256.jpg")
+            // $("div:not(#btn,#div2)").hide()
+            //     $("div").css({
+            //         "border": "2px solid green",
+            //         "color": "blue"
+            //     })
+            // $("#div2").fadeOut(3000);
+            // $("#div1").slideToggle(1500)
+            // $("p").text("<b>new para</b>")
+            // $("div").re
+            //$("#div2").fadeTo(2000, 0.2)
+            //          })
+            $("img").hover(function() {
+                    //      $(this).fadeTo(2000, 0.2)
+                    //     $(this).fadeToggle(3000)
+                    //     $(this).css("color", "pink")
+                    $(this).attr("src", "0I0A0256.jpg");
+                },
+                function() {
+                    $(this).attr("src", "0I0A0279.jpg");
+                    //     $(this).fadeToggle(3000)
+                    //     $(this).css("color", "yellow")
+                })
+        })
+    </script>
+
+</body>
+
+</html>

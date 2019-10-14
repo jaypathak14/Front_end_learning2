@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+
+</head>
+
+<body>
+    <!--  <input type="text" placeholder="enter first name" id="first" onkeypress="changecolor()" />
+    <input type="text" placeholder="enter last name" id="last" />
+    <script>
+        var fname = document.getElementById('first').value
+        var lname = document.getElementById('last').value
+
+        function changecolor() {
+
+            if (fname.value = ' ') {
+                fname.style.borderColor = 'red'
+            }
+        }
+    </script>
+-->
+
+    <script>
+        var date = new Date()
+        document.write(date)
+        var day = date.getMonth()
+        document.write("<br>" + (day + 1))
+
+        function getDayName(day) {
+            var days = ["sunday", "monday", "tuesday", "wednesday"]
+            return days[day]
+        }
+    </script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .styleDiv {
+            border: 2px solid black;
+            padding: 20px;
+            display: table-cell;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="styleDiv" id="div1">div1
+        <div class="styleDiv" id="div2">div2
+            <div class="styleDiv" id="div3">div3</div>
+        </div>
+    </div>
+    <script>
+        //event bubbling + event capturing
+
+        var elements = document.getElementsByTagName("div")
+
+        for (let index = 0; index < elements.length; index++) {
+            elements[index].addEventListener("click", clickhandler, true);
+            elements[index].addEventListener("click", clickhandler, false);
+        }
+
+        function clickhandler(event) {
+            alert(this.getAttribute("id") + " called");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> </title>
+
+</head>
+
+<body>
+    <h1>countdown</h1>
+    <input type="text" placeholder="Enter value" id="txtbox"> <br>
+    <input type="button" value="Start" id="btn1" onclick="StartTimer()">
+    <input type="button" value="Stop" id="btn2" onclick="StopTimer()">
+    <script>
+        function StartTimer() {
+            var val = document.getElementById("txtbox").values;
+            val = val - 1;
+            //if(val==0)
+            //{
+            //
+            //}
+            document.getElementById("txtbox").value = val
+            setTimeout(StartTimer, 1000)
+
+        }
+    </script>
+
+
+</body>
+
+</html>

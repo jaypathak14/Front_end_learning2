@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #smallimg {
+            height: 200px;
+            width: 200px;
+        }
+        
+        .zoom {
+            transition: transform .5s;
+        }
+        
+        .zoom:hover {
+            transform: scale(3);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="\Front_end_learning\o\images\0I0A0265.jpg" width="1000px" height="700px" id="bigimg">
+    <div id="smallimgs" onclick="changeimage(event)">
+        <img src="\Front_end_learning\o\images\0I0A0027.JPG" id="smallimg" class="zoom">
+        <img src="\Front_end_learning\o\images\0I0A0267.JPG" id="smallimg" class="zoom">
+        <img src="\Front_end_learning\o\images\0I0A0270.JPG" id="smallimg" class="zoom">
+        <img src="\Front_end_learning\o\images\0I0A0271.JPG" id="smallimg" class="zoom">
+        <img src="\Front_end_learning\o\images\0I0A0272.JPG" id="smallimg" class="zoom">
+        <img src="\Front_end_learning\o\images\0I0A0278.JPG" id="smallimg" class="zoom">
+
+
+
+    </div>
+    <script>
+        function changeimage(event) {
+            var targetElement = event.target;
+            console.log(targetElement.tagName);
+            if (targetElement.tagName == 'IMG') {
+                document.getElementById("bigimg").src = targetElement.getAttribute("src");
+            }
+        }
+    </script>
+</body>
+
+</html>

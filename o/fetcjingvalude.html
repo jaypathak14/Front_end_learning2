@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>hi my first form value fetch
+
+    </p>
+    <form>
+        Name:<input type="text" id="txt1" /><br> Gender:
+
+        <input type="radio" value="Male" id="rd1" name="gender" />Male
+        <input type="radio" value="Female" id="rd2" name="gender" />Female<br><br> Hobbies:
+        <input type="checkbox" value="Offroading" id="H1" name="hobbies">Offroading<br>
+        <input type="checkbox" value="Air rifle" id="H2" name="hobbies">Air rifle<br><br>
+        <input type="checkbox" value="Photography" id="H3" name="hobbies">Photography<br>
+        <input type="checkbox" value="Gaming" id="H4" name="hobbies">Gaming<br><br> City
+        <select name="City" id="city">
+            <option value="jabalpur">jabalpur</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Chhindwara">Chhindwara</option>
+            <option value="Indore">Indore</option>
+            <option value="LKH">LKH</option>
+        </select>
+        <input type="button" value="Submit" onclick="submitvalues()">
+        <script>
+            function submitvalues() {
+                var m = document.getElementById("rd1");
+                var f = document.getElementById("rd2");
+                var o = document.getElementById("H1");
+                var a = document.getElementById("H2");
+                var p = document.getElementById("H3");
+                var g = document.getElementById("H4");
+
+                if (m.checked == true) {
+                    alert(m.value)
+                }
+                if (f.checked == true) {
+                    alert(f.value)
+                }
+                if (o.checked == true) {
+                    alert(o.value)
+                }
+                if (a.checked == true) {
+                    alert(a.value)
+                }
+                if (p.checked == true) {
+                    alert(p.value)
+                }
+                if (g.checked == true) {
+                    alert(g.value)
+                }
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>
